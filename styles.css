@@ -1,0 +1,308 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #f8f9fa;
+    border-bottom: 2px solid #ddd;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 250px;
+    max-height: 100px;
+    margin: 10px 10px;
+    padding: 0;
+}
+
+.filters {
+    width: 100%;
+    max-height: 50px;
+    text-align: right;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.filters select {
+    margin: 0 5px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.filters button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+/* Carrusel de publicaciones */
+.carousel-container {
+    margin-top: 20px;
+    width: 100%;
+    height: 600px;
+    overflow-x: scroll;
+    display: flex;
+    justify-content: center;
+    scroll-behavior: smooth;
+    padding: 10px 0; /* Espaciado superior e inferior */
+}
+
+.carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Siempre 3 columnas */
+    grid-auto-rows: 200px; /* Asegura que cada fila tenga 200px */
+    gap: 10px; /* Espacio entre productos */
+    width: 100%; /* Ajuste automático al contenedor */
+}
+
+.product {
+    width: 100%;
+    height: 100%; /* Ajuste dinámico con las filas */
+    text-align: center;
+    background: #f9f9f9; /* Fondo claro para destacar */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Animación al pasar el mouse */
+}
+
+.product:hover {
+    transform: scale(1.05); /* Efecto de ampliación */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+    word-wrap: break-word;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Ocultar la barra de desplazamiento */
+}
+
+header h1 {
+    text-align: center;
+    margin: 10px 0 0;
+    padding-top: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.about {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.action-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.action-buttons button:hover {
+    background: #218838;
+}
+
+.tittle-packages {
+    text-align: center;
+}
+
+.packages {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.package {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.package h3 {
+    color: #28a745;
+}
+
+.package ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.package ul li {
+    margin: 5px 0;
+}
+
+.package button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.package button:hover {
+    background: #0056b3;
+}
+
+.button-whatsapp {
+    text-align: center;
+}
+
+.button-whatsapp button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+}
+
+/* Media queries para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        height: 150px;
+    }
+
+    .logo {
+        max-width: 80px;
+        max-height: 40px;
+        margin: 5px auto;
+    }
+
+    .filters {
+        text-align: center;
+        margin: 10px 0;
+        padding-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .slider {
+        height: auto; /* Altura dinámica */
+    }
+
+    .packages {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Media queries para pantallas muy pequeñas (teléfonos) */
+@media screen and (max-width: 480px) {
+    .header-container{
+        height: 300px;
+    }
+
+    header h1 {
+        font-size: 18px;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .filters select {
+        width: 90%;
+        margin: 5px auto;
+    }
+
+    .action-buttons button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .package {
+        padding: 10px;
+    }
+
+    .package button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Media queries para pantallas muy pequeñas (teléfonos) */
+@media screen and (max-width: 360px) {
+    .header-container{
+        height: 300px;
+    }
+
+    header h1 {
+        font-size: 18px;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .filters select {
+        width: 90%;
+        margin: 5px auto;
+    }
+
+    .action-buttons button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .package {
+        padding: 10px;
+    }
+
+    .package button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
